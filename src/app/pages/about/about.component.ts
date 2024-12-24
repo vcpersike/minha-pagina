@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {
+export class AboutComponent  {
   title: string = 'Sobre Mim';
   description: string = 'Esta página apresenta informações sobre mim e meu trabalho.';
 
   constructor(private router: Router) {}
 
   goToHome(): void {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home'], { replaceUrl: true });
   }
 }

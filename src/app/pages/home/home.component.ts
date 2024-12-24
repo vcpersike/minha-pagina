@@ -31,6 +31,6 @@ export class HomeComponent implements OnInit {
   }
 
   goToAbout(): void {
-    this.router.navigate(['/about']);
+    this.router.navigate(['/about'],{ replaceUrl: true });
   }
 }
