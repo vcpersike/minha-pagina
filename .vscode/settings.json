@@ -1,3 +1,39 @@
 {
-  "typescript.preferences.autoImportFileExcludePatterns": ["@ionic/angular/common", "@ionic/angular"]
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular"
+  ],
+  "cSpell.words": [
+    "aplicação",
+    "apresenta",
+    "através",
+    "Atualiza",
+    "Atualizado",
+    "Atualizar",
+    "bazel",
+    "Descrição",
+    "desenvolvedor",
+    "diversas",
+    "especializado",
+    "Esta",
+    "homescreen",
+    "informações",
+    "Inicializa",
+    "libpeerconnection",
+    "minha",
+    "mnpcod",
+    "MVVM",
+    "página",
+    "Projeto",
+    "Projetos",
+    "Sobre",
+    "styleext",
+    "tecnologias",
+    "testem",
+    "título",
+    "trabalho",
+    "vindo",
+    "Voltar",
+    "xcuserstate"
+  ]
 }
