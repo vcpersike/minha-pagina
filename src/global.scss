@@ -30,6 +30,7 @@ ion-content {
 }
 
 ion-button {
+  --background-color: transparent;
   --background: #f4f4f4;
   --border-radius: 12px;
   --color: #3880ff;
@@ -50,6 +51,7 @@ ion-router-outlet {
     bottom: unset;
   }
   ion-button {
+    background-color: transparent;
     background: #f4f4f4;
     border-radius: 12px;
     color: #3880ff;
