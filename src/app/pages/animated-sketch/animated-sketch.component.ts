@@ -1,9 +1,13 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import * as random from 'canvas-sketch-util/random';
 import * as math from 'canvas-sketch-util/math';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-animated-sketch',
+  imports: [CommonModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './animated-sketch.component.html',
   styleUrls: ['./animated-sketch.component.scss']
 })
@@ -14,6 +18,7 @@ export class AnimatedSketchComponent implements OnInit {
   private height: number = window.innerHeight;
   private agents: Agent[] = [];
 
+  constructor(private router: Router) {}
   ngOnInit() {
     const canvas = this.canvasRef.nativeElement;
     this.context = canvas.getContext('2d')!;
@@ -62,6 +67,10 @@ export class AnimatedSketchComponent implements OnInit {
 
     requestAnimationFrame(this.animate);
   };
+
+  goToHome(): void {
+    this.router.navigate(['/home'], { replaceUrl: true });
+  }
 }
 
 class Vector {
@@ -107,5 +116,6 @@ class Agent {
     context.stroke();
 
     context.restore();
-  }
+  };
+
 }

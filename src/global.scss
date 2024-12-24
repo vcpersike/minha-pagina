@@ -30,11 +30,13 @@ ion-content {
 }
 
 ion-button {
+  --margin: 0.2rem;
   --background-color: transparent;
   --background: #f4f4f4;
   --border-radius: 12px;
   --color: #3880ff;
   --padding: 8px 16px;
+  --box-shadow: none;
 }
 
 ion-router-outlet {
@@ -51,6 +53,7 @@ ion-router-outlet {
     bottom: unset;
   }
   ion-button {
+    margin: 0.2rem;
     background-color: transparent;
     background: #f4f4f4;
     border-radius: 12px;
