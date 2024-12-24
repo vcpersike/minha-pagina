@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { slideInAnimation } from 'src/animations/slide-animation';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
+  public slideInAnimation = slideInAnimation;
   constructor() {
-    console.log('Application initialized');
   }
 }

@@ -22,7 +22,10 @@
 }
 
 ion-content {
+  height: 100%;
+  width: 100%;
   --background: #313030;
+
 }
 
 ion-button {
@@ -30,6 +33,10 @@ ion-button {
   --border-radius: 12px;
   --color: #3880ff;
   --padding: 8px 16px;
+}
+
+ion-router-outlet {
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (min-width: 200), (max-width: 1280px) {
@@ -47,10 +54,15 @@ ion-button {
     padding: 8px 16px;
   }
   ion-content {
+    height: 100vh;
+    width: 100%;
     background: #313030;
   }
   ion-header {
     background: #313030;
+  }
+  ion-router-outlet {
+    transition: transform 0.3s ease-in-out;
   }
 }
 

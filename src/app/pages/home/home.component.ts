@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   projects: { name: string; description: string }[] = [];
 
   constructor(private homeViewModel: HomeViewModel, private router: Router) {
-    console.log('HomeComponent initialized');
   }
 
   ngOnInit(): void {
@@ -32,5 +31,12 @@ export class HomeComponent implements OnInit {
 
   goToAbout(): void {
     this.router.navigate(['/about'],{ replaceUrl: true });
+  }
+
+  goToCanvas(): void {
+    this.router.navigate(['/canvas'],{ replaceUrl: true });
+  }
+  goToAnimatedSketch(): void {
+    this.router.navigate(['/animated-sketch'],{ replaceUrl: true });
   }
 }
