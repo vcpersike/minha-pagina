@@ -33,9 +33,6 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/about'],{ replaceUrl: true });
   }
 
-  goToCanvas(): void {
-    this.router.navigate(['/canvas'],{ replaceUrl: true });
-  }
   goToAnimatedSketch(): void {
     this.router.navigate(['/animated-sketch'],{ replaceUrl: true });
   }

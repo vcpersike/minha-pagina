@@ -16,6 +16,7 @@
 
 .button-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
@@ -41,6 +42,7 @@ ion-router-outlet {
 
 @media (min-width: 200), (max-width: 1280px) {
   .ion-page {
+    height: 100%;
     position: relative !important;
     top: unset;
     left: unset;
