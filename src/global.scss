@@ -16,10 +16,19 @@
 
 .button-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
+}
+
+.ion-page {
+  height: 100%;
+  position: relative !important;
+  top: unset;
+  left: unset;
+  right: unset;
+  bottom: unset;
 }
 
 ion-content {
@@ -35,22 +44,15 @@ ion-button {
   --background: #f4f4f4;
   --border-radius: 12px;
   --color: #3880ff;
-  --padding: 8px 16px;
+  --padding: 0.1rem 0.125rem;
   --box-shadow: none;
 }
 
-ion-router-outlet {
-  transition: transform 0.3s ease-in-out;
-}
 
-@media (min-width: 200), (max-width: 1280px) {
-  .ion-page {
-    height: 100%;
-    position: relative !important;
-    top: unset;
-    left: unset;
-    right: unset;
-    bottom: unset;
+@media (min-width: 200), (max-width: 500px) {
+
+  .button-container {
+    flex-direction: column;
   }
   ion-button {
     margin: 0.2rem;
@@ -58,7 +60,7 @@ ion-router-outlet {
     background: #f4f4f4;
     border-radius: 12px;
     color: #3880ff;
-    padding: 8px 16px;
+    padding: 0.1rem 0.125rem;
   }
   ion-content {
     height: 100vh;
@@ -68,8 +70,63 @@ ion-router-outlet {
   ion-header {
     background: #313030;
   }
-  ion-router-outlet {
-    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 1024), (max-width: 1366px) {
+
+  ion-button {
+    margin: 0.2rem;
+    background-color: transparent;
+    background: #f4f4f4;
+    border-radius: 12px;
+    color: #3880ff;
+    padding: 0.1rem 0.125rem;
+  }
+  ion-content {
+    height: 100vh;
+    width: 100%;
+    background: #313030;
+  }
+  ion-header {
+    background: #313030;
+  }
+}
+@media (min-width: 820), (max-width: 1180px) {
+
+  ion-button {
+    margin: 0.2rem;
+    background-color: transparent;
+    background: #f4f4f4;
+    border-radius: 12px;
+    color: #3880ff;
+    padding: 0.1rem 0.125rem;
+  }
+  ion-content {
+    height: 100vh;
+    width: 100%;
+    background: #313030;
+  }
+  ion-header {
+    background: #313030;
   }
 }
 
+@media (min-width: 540), (max-width: 720px) {
+
+  ion-button {
+    margin: 0.2rem;
+    background-color: transparent;
+    background: #f4f4f4;
+    border-radius: 12px;
+    color: #3880ff;
+    padding: 0.1rem 0.125rem;
+  }
+  ion-content {
+    height: 100vh;
+    width: 100%;
+    background: #313030;
+  }
+  ion-header {
+    background: #313030;
+  }
+}
