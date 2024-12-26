@@ -2,10 +2,12 @@ import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HomeViewModel } from './home.viewmodel';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '@shared/header/header.component';
+import { FooterComponent } from '@shared/footer/footer.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],

@@ -1,12 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { AnimatedSketchComponent } from './pages/animated-sketch/animated-sketch.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'animated-sketch', component: AnimatedSketchComponent },
+  { path: 'home', loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) },
+  { path: 'about', loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent) },
+  { path: 'animated-sketch', loadComponent: () => import('./pages/animated-sketch/animated-sketch.component').then(m => m.AnimatedSketchComponent) },
   { path: '**', redirectTo: 'home' },
 ];

@@ -3,16 +3,18 @@ import * as random from 'canvas-sketch-util/random';
 import * as math from 'canvas-sketch-util/math';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from 'src/app/shared/header/header.component';
 
 @Component({
   selector: 'app-animated-sketch',
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './animated-sketch.component.html',
   styleUrls: ['./animated-sketch.component.scss']
 })
 export class AnimatedSketchComponent implements OnInit {
   @ViewChild('canvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
+  title: string = 'Animações';
   private context!: CanvasRenderingContext2D;
   private width: number = window.innerWidth;
   private height: number = window.innerHeight;

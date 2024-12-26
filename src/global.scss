@@ -13,6 +13,13 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 @import '@ionic/angular/css/palettes/dark.system.css';
+app-header{
+  background-color: #313030;
+}
+
+app-footer{
+  background-color: #313030;
+}
 
 .button-container {
   display: flex;
@@ -31,102 +38,67 @@
   bottom: unset;
 }
 
-ion-content {
+.ctn-ion {
   height: 100%;
   width: 100%;
-  --background: #313030;
+  background: #313030;
 
 }
 
-ion-button {
-  --margin: 0.2rem;
-  --background-color: transparent;
-  --background: #f4f4f4;
-  --border-radius: 12px;
-  --color: #3880ff;
-  --padding: 0.1rem 0.125rem;
-  --box-shadow: none;
+.btn-ion {
+  margin: 0.2rem;
+  background-color: transparent;
+  background: #f4f4f4;
+  border-radius: 8px;
+  color: #3880ff;
+  padding: 0.5rem 1rem;
+  box-shadow: none;
 }
 
+.btn-ion-back {
+  background-color: #007bff;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+}
+ion-icon {
+  font-size: 24px;
+}
 
-@media (min-width: 200), (max-width: 500px) {
+@media (min-width: 200), (max-width: 539px) {
 
   .button-container {
     flex-direction: column;
   }
-  ion-button {
-    margin: 0.2rem;
-    background-color: transparent;
-    background: #f4f4f4;
-    border-radius: 12px;
-    color: #3880ff;
-    padding: 0.1rem 0.125rem;
-  }
-  ion-content {
+  .ctn-ion {
     height: 100vh;
-    width: 100%;
-    background: #313030;
-  }
-  ion-header {
-    background: #313030;
-  }
-}
 
-@media (min-width: 1024), (max-width: 1366px) {
+  }
 
-  ion-button {
-    margin: 0.2rem;
-    background-color: transparent;
-    background: #f4f4f4;
-    border-radius: 12px;
-    color: #3880ff;
-    padding: 0.1rem 0.125rem;
-  }
-  ion-content {
-    height: 100vh;
-    width: 100%;
-    background: #313030;
-  }
-  ion-header {
-    background: #313030;
-  }
-}
-@media (min-width: 820), (max-width: 1180px) {
-
-  ion-button {
-    margin: 0.2rem;
-    background-color: transparent;
-    background: #f4f4f4;
-    border-radius: 12px;
-    color: #3880ff;
-    padding: 0.1rem 0.125rem;
-  }
-  ion-content {
-    height: 100vh;
-    width: 100%;
-    background: #313030;
-  }
-  ion-header {
-    background: #313030;
-  }
 }
 
 @media (min-width: 540), (max-width: 720px) {
 
-  ion-button {
-    margin: 0.2rem;
-    background-color: transparent;
-    background: #f4f4f4;
-    border-radius: 12px;
-    color: #3880ff;
-    padding: 0.1rem 0.125rem;
-  }
-  ion-content {
+  .ctn-ion {
     height: 100vh;
-    width: 100%;
-    background: #313030;
-  }
-  ion-header {
-    background: #313030;
+
   }
 }
+
+@media (min-width: 820), (max-width: 1180px) {
+
+  .ctn-ion {
+    height: 100vh;
+
+  }
+}
+
+@media (min-width: 1024), (max-width: 1366px) {
+  .ctn-ion {
+    height: 100vh;
+
+  }
+}
+
+

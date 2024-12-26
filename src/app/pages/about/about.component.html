@@ -1,10 +1,6 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>{{ title }}</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="title"></app-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding ctn-ion">
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
 
@@ -13,5 +9,6 @@
     Meu nome é DevViking, e sou desenvolvedor especializado em Angular, Ionic e diversas tecnologias web.
   </p>
 
-  <ion-button (click)="goToHome()" class="teste">Voltar para Home</ion-button>
+  <ion-button (click)="goToHome()" class="btn-ion">Voltar para Home</ion-button>
 </ion-content>
+<app-footer></app-footer>

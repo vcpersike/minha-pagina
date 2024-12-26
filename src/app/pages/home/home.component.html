@@ -1,10 +1,6 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>{{ title }}</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [title]="title"></app-header>
 
-<ion-content class="ion-padding" >
+<ion-content class="ion-padding ctn-ion" >
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
 
@@ -15,8 +11,9 @@
     </li>
   </ul>
   <div class="button-container">
-    <ion-button (click)="updateTitle()">Atualizar Título</ion-button>
-    <ion-button (click)="goToAbout()">Ir para About</ion-button>
-    <ion-button (click)="goToAnimatedSketch()">Ir para Animated Sketch</ion-button>
+    <ion-button (click)="updateTitle()" class="btn-ion">Atualizar Título</ion-button>
+    <ion-button (click)="goToAbout()" class="btn-ion">Ir para About</ion-button>
+    <ion-button (click)="goToAnimatedSketch()" class="btn-ion">Ir para Animated Sketch</ion-button>
   </div>
 </ion-content>
+<app-footer></app-footer>

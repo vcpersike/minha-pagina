@@ -1,0 +1,19 @@
+ion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+
+  ion-toolbar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+  }
+
+
+}
+
+
