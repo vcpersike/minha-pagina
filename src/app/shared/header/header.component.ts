@@ -3,11 +3,12 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, OnInit } from '@angular/core'
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { logoIonic } from 'ionicons/icons';
+import { arrowBack } from 'ionicons/icons';
 
 @Component({
   selector: 'app-header',
   imports: [CommonModule],
+  standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
@@ -16,7 +17,7 @@ import { logoIonic } from 'ionicons/icons';
 export class HeaderComponent  implements OnInit {
   @Input() title: string = 'Default Title';
   constructor(private location: Location, private router: Router) {
-  addIcons({ logoIonic });
+  addIcons({'arrow-back': arrowBack });
   }
 
   ngOnInit(): void {}
