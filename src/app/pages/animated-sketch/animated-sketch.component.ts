@@ -4,10 +4,11 @@ import * as math from 'canvas-sketch-util/math';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from 'src/app/shared/header/header.component';
+import { FooterComponent } from '@shared/footer/footer.component';
 
 @Component({
   selector: 'app-animated-sketch',
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './animated-sketch.component.html',
   styleUrls: ['./animated-sketch.component.scss']
@@ -32,7 +33,7 @@ export class AnimatedSketchComponent implements OnInit {
   }
 
   initializeAgents() {
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 70; i++) {
       const x = random.range(0, this.width);
       const y = random.range(0, this.height);
       this.agents.push(new Agent(x, y));
@@ -40,7 +41,7 @@ export class AnimatedSketchComponent implements OnInit {
   }
 
   animate = () => {
-    this.context.fillStyle = 'white';
+    this.context.fillStyle = 'rgba(255, 255, 255, 0.23)';
     this.context.fillRect(0, 0, this.width, this.height);
 
     for (let i = 0; i < this.agents.length; i++) {
@@ -50,9 +51,9 @@ export class AnimatedSketchComponent implements OnInit {
         const other = this.agents[j];
         const dist = agent.pos.getDistance(other.pos);
 
-        if (dist > 200) continue;
+        if (dist > 180) continue;
 
-        this.context.lineWidth = math.mapRange(dist, 0, 200, 12, 1);
+        this.context.lineWidth = math.mapRange(dist, 0, 180, 8, 0.5);
 
         this.context.beginPath();
         this.context.moveTo(agent.pos.x, agent.pos.y);
@@ -110,7 +111,7 @@ class Agent {
     context.save();
     context.translate(this.pos.x, this.pos.y);
 
-    context.lineWidth = 4;
+    context.lineWidth = 7;
 
     context.beginPath();
     context.arc(0, 0, this.radius, 0, Math.PI * 2);

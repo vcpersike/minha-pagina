@@ -2,21 +2,28 @@ canvas {
   z-index: -1;
   display: block;
   margin: 0 auto;
-  background: white;
-  border: 1px solid black;
+  background: transparent;
 }
 
 .animated-sketch {
   position: relative;
 }
 
-.back-button {
+.teste{
   position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #007bff;
-  border-radius: 12px;
-  color: white;
-  font-size: 16px;
-  padding: 0.5rem 1rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(17, 16, 16);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
