@@ -4,7 +4,6 @@ import * as math from 'canvas-sketch-util/math';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from 'src/app/shared/header/header.component';
-import { FooterComponent } from '@shared/footer/footer.component';
 
 @Component({
   selector: 'app-animated-sketch',
