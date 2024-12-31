@@ -8,7 +8,7 @@ import { FooterComponent } from '@shared/footer/footer.component';
 
 @Component({
   selector: 'app-animated-sketch',
-  imports: [CommonModule, HeaderComponent, FooterComponent],
+  imports: [CommonModule, HeaderComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './animated-sketch.component.html',
   styleUrls: ['./animated-sketch.component.scss']
@@ -70,10 +70,6 @@ export class AnimatedSketchComponent implements OnInit {
 
     requestAnimationFrame(this.animate);
   };
-
-  goToHome(): void {
-    this.router.navigate(['/home'], { replaceUrl: true });
-  }
 }
 
 class Vector {
